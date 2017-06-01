@@ -86,6 +86,8 @@
 		71D4A1FB1D9C9359006FACB7 /* EMContactInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D4A1F31D9C9359006FACB7 /* EMContactInfoCell.xib */; };
 		71D4A1FC1D9C9359006FACB7 /* EMGroupTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D4A1F51D9C9359006FACB7 /* EMGroupTitleCell.m */; };
 		71D4A1FD1D9C9359006FACB7 /* EMGroupTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D4A1F61D9C9359006FACB7 /* EMGroupTitleCell.xib */; };
+		71D956A41EE0349B00EDEE19 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71D956A31EE0349B00EDEE19 /* Settings.bundle */; };
+		71D956A71EE034C200EDEE19 /* AppDelegate+PrivateDeploy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D956A61EE034C200EDEE19 /* AppDelegate+PrivateDeploy.m */; };
 		C4D616A01E08B42C00E108A2 /* EMChatEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6169F1E08B42C00E108A2 /* EMChatEmojiView.m */; };
 		C4D616A21E08B4AC00E108A2 /* EMChatEmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D616A11E08B4AC00E108A2 /* EMChatEmojiView.xib */; };
 		D20E26D71DCA011C00B3FAC6 /* icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = D20E26D41DCA011C00B3FAC6 /* icon_info.png */; };
@@ -563,6 +565,9 @@
 		71D4A1F41D9C9359006FACB7 /* EMGroupTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMGroupTitleCell.h; sourceTree = "<group>"; };
 		71D4A1F51D9C9359006FACB7 /* EMGroupTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMGroupTitleCell.m; sourceTree = "<group>"; };
 		71D4A1F61D9C9359006FACB7 /* EMGroupTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMGroupTitleCell.xib; sourceTree = "<group>"; };
+		71D956A31EE0349B00EDEE19 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		71D956A51EE034C200EDEE19 /* AppDelegate+PrivateDeploy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PrivateDeploy.h"; sourceTree = "<group>"; };
+		71D956A61EE034C200EDEE19 /* AppDelegate+PrivateDeploy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PrivateDeploy.m"; sourceTree = "<group>"; };
 		C4D6169E1E08B42C00E108A2 /* EMChatEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatEmojiView.h; sourceTree = "<group>"; };
 		C4D6169F1E08B42C00E108A2 /* EMChatEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMChatEmojiView.m; sourceTree = "<group>"; };
 		C4D616A11E08B4AC00E108A2 /* EMChatEmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMChatEmojiView.xib; sourceTree = "<group>"; };
@@ -1357,6 +1362,8 @@
 				D28345251D8FEE3F00FD48A9 /* Resources */,
 				D28345051D8FD1D400FD48A9 /* AppDelegate.h */,
 				D28345061D8FD1D400FD48A9 /* AppDelegate.m */,
+				71D956A51EE034C200EDEE19 /* AppDelegate+PrivateDeploy.h */,
+				71D956A61EE034C200EDEE19 /* AppDelegate+PrivateDeploy.m */,
 				D2426AE31DCC89C0009C1632 /* AppDelegate+Parse.h */,
 				D2426AE41DCC89C0009C1632 /* AppDelegate+Parse.m */,
 				D2426AEF1DCCB3DD009C1632 /* EMUserProfileManager.h */,
@@ -1373,6 +1380,7 @@
 		D28345021D8FD1D400FD48A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				71D956A31EE0349B00EDEE19 /* Settings.bundle */,
 				D28345031D8FD1D400FD48A9 /* main.m */,
 				D283451F1D8FDC8200FD48A9 /* Localizable.strings */,
 				D28345721D900E1600FD48A9 /* ChatDemo-UI3.0.pch */,
@@ -1945,7 +1953,7 @@
 				TargetAttributes = {
 					D28344FE1D8FD1D400FD48A9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ZHZ4TMESQ4;
+						DevelopmentTeam = 499WYUV8Q2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -2244,6 +2252,7 @@
 				716634411DB0ECAB00C92E27 /* EMCreateViewController.xib in Resources */,
 				D2BF7EBA1D914DB30090AA66 /* Icon_Location@2x.png in Resources */,
 				D2BF7E7F1D914DB30090AA66 /* Button_Speaker@3x.png in Resources */,
+				71D956A41EE0349B00EDEE19 /* Settings.bundle in Resources */,
 				D2BF7F221D914DB30090AA66 /* logo6.png in Resources */,
 				D2BF7E351D914DB30090AA66 /* Icon_Requests.png in Resources */,
 				71D4A1E01D9C9284006FACB7 /* EMContactListSectionHeader.xib in Resources */,
@@ -2443,6 +2452,7 @@
 				D2426AE51DCC89C0009C1632 /* AppDelegate+Parse.m in Sources */,
 				D24327E01DAA395F00EDCDAB /* EMAudioRecorderUtil.m in Sources */,
 				C4D616A01E08B42C00E108A2 /* EMChatEmojiView.m in Sources */,
+				71D956A71EE034C200EDEE19 /* AppDelegate+PrivateDeploy.m in Sources */,
 				D24327E21DAA395F00EDCDAB /* EMCDDeviceManager+Microphone.m in Sources */,
 				D28538771DB1EBB50027D4E1 /* EMAccountViewController.m in Sources */,
 				D2AA4DED1D92746800967E0E /* EMChatsCell.m in Sources */,
@@ -2674,7 +2684,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ChatDemo-UI3.0/ChatDemo-UI3.0.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = ZHZ4TMESQ4;
+				DEVELOPMENT_TEAM = 499WYUV8Q2;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ChatDemo-UI3.0/ChatDemo-UI3.0.pch";
@@ -2686,7 +2696,7 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.hyphenate.demo.im;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2699,7 +2709,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "ChatDemo-UI3.0/ChatDemo-UI3.0.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZHZ4TMESQ4;
+				DEVELOPMENT_TEAM = 499WYUV8Q2;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ChatDemo-UI3.0/ChatDemo-UI3.0.pch";
@@ -2711,7 +2721,7 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.hyphenate.demo.im;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
