@@ -57,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 4;
 }
 
 
@@ -86,12 +86,14 @@
         cell.textLabel.text = NSLocalizedString(@"setting.account", @"Account");
         cell.detailTextLabel.text = [[EMClient sharedClient] currentUsername];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    } else if (indexPath.row == 3) {
-        
-        cell.textLabel.text = NSLocalizedString(@"setting.chats", @"Chats");
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-    } else {
+    }
+//    else if (indexPath.row == 3) {
+//        
+//        cell.textLabel.text = NSLocalizedString(@"setting.chats", @"Chats");
+//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//
+//    }
+    else {
         
         cell.textLabel.text = NSLocalizedString(@"setting.callPush", @"If the offline send call push");
         self.callPushSwitch.frame = CGRectMake(self.tableView.frame.size.width - 65, 8, 50, 30);
@@ -123,12 +125,13 @@
         EMAccountViewController *accout = [[EMAccountViewController alloc] init];
             accout.title = NSLocalizedString(@"title.setting.account", @"Account");
         [self.navigationController pushViewController:accout animated:YES];
-    } else if (indexPath.row == 3) {
-            
-        EMChatsSettingViewController *chatSetting = [[EMChatsSettingViewController alloc] init];
-        chatSetting.title = NSLocalizedString(@"title.setting.chats", @"Chats");
-        [self.navigationController pushViewController:chatSetting animated:YES];
     }
+//    else if (indexPath.row == 3) {
+//            
+//        EMChatsSettingViewController *chatSetting = [[EMChatsSettingViewController alloc] init];
+//        chatSetting.title = NSLocalizedString(@"title.setting.chats", @"Chats");
+//        [self.navigationController pushViewController:chatSetting animated:YES];
+//    }
 }
 
 

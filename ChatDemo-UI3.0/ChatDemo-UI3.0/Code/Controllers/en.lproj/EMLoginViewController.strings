@@ -1,12 +1,12 @@
 
 /* Class = "UILabel"; text = "Yay! New to Hyphenate?"; ObjectID = "7tK-h9-Mgx"; */
-"7tK-h9-Mgx.text" = "Yay! New to Hyphenate?";
+"7tK-h9-Mgx.text" = "Yay! New to TestDemo?";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "IgV-CU-0WE"; */
 "IgV-CU-0WE.placeholder" = "Password";
 
 /* Class = "UITextField"; placeholder = "Hyphenate ID"; ObjectID = "LmY-eG-rqi"; */
-"LmY-eG-rqi.placeholder" = "Hyphenate ID";
+"LmY-eG-rqi.placeholder" = "TestDemo ID";
 
 /* Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "ex1-Ar-Dxs"; */
 "ex1-Ar-Dxs.normalTitle" = "LOG IN";
