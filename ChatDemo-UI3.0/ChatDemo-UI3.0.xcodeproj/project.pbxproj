@@ -71,6 +71,9 @@
 		716634751DB0EFC300C92E27 /* EMGroupPermissionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716634731DB0EFC300C92E27 /* EMGroupPermissionCell.xib */; };
 		716634781DB0EFD900C92E27 /* EMRefreshFootViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 716634771DB0EFD900C92E27 /* EMRefreshFootViewCell.m */; };
 		7166347B1DB0EFEE00C92E27 /* EMRefreshFootViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7166347D1DB0EFEE00C92E27 /* EMRefreshFootViewCell.xib */; };
+		71BAD20F1EE15DA9001D8B6B /* Logo_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BAD20E1EE15DA9001D8B6B /* Logo_green@3x.png */; };
+		71BAD2121EE15F19001D8B6B /* Logo_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BAD2101EE15F19001D8B6B /* Logo_green.png */; };
+		71BAD2131EE15F19001D8B6B /* Logo_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71BAD2111EE15F19001D8B6B /* Logo_green@2x.png */; };
 		71D4A1CD1D9C91B8006FACB7 /* default_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D4A1CC1D9C91B8006FACB7 /* default_avatar@2x.png */; };
 		71D4A1D11D9C9229006FACB7 /* UIImage+ImageEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D4A1D01D9C9229006FACB7 /* UIImage+ImageEffect.m */; };
 		71D4A1D61D9C923D006FACB7 /* EMUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D4A1D41D9C923D006FACB7 /* EMUserModel.m */; };
@@ -354,9 +357,6 @@
 		D2BF7ED41D914DB30090AA66 /* Icon_Search.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DC31D914DB20090AA66 /* Icon_Search.png */; };
 		D2BF7ED51D914DB30090AA66 /* Icon_Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DC41D914DB20090AA66 /* Icon_Search@2x.png */; };
 		D2BF7ED61D914DB30090AA66 /* Icon_Search@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DC51D914DB20090AA66 /* Icon_Search@3x.png */; };
-		D2BF7EDA1D914DB30090AA66 /* Logo_green.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DCB1D914DB20090AA66 /* Logo_green.png */; };
-		D2BF7EDB1D914DB30090AA66 /* Logo_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DCC1D914DB20090AA66 /* Logo_green@2x.png */; };
-		D2BF7EDC1D914DB30090AA66 /* Logo_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DCD1D914DB20090AA66 /* Logo_green@3x.png */; };
 		D2BF7EDD1D914DB30090AA66 /* Chats.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DCF1D914DB20090AA66 /* Chats.png */; };
 		D2BF7EDE1D914DB30090AA66 /* Chats@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DD01D914DB20090AA66 /* Chats@2x.png */; };
 		D2BF7EDF1D914DB30090AA66 /* Chats@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2BF7DD11D914DB20090AA66 /* Chats@3x.png */; };
@@ -540,6 +540,9 @@
 		7166347C1DB0EFEE00C92E27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/EMRefreshFootViewCell.xib; sourceTree = "<group>"; };
 		7166347F1DB0EFF000C92E27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EMRefreshFootViewCell.strings; sourceTree = "<group>"; };
 		716634811DB0EFF100C92E27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EMRefreshFootViewCell.strings"; sourceTree = "<group>"; };
+		71BAD20E1EE15DA9001D8B6B /* Logo_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_green@3x.png"; sourceTree = "<group>"; };
+		71BAD2101EE15F19001D8B6B /* Logo_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_green.png; sourceTree = "<group>"; };
+		71BAD2111EE15F19001D8B6B /* Logo_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_green@2x.png"; sourceTree = "<group>"; };
 		71D4A1CC1D9C91B8006FACB7 /* default_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default_avatar@2x.png"; sourceTree = "<group>"; };
 		71D4A1CE1D9C9229006FACB7 /* EMColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMColorUtils.h; sourceTree = "<group>"; };
 		71D4A1CF1D9C9229006FACB7 /* UIImage+ImageEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffect.h"; sourceTree = "<group>"; };
@@ -897,9 +900,6 @@
 		D2BF7DC31D914DB20090AA66 /* Icon_Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Search.png; sourceTree = "<group>"; };
 		D2BF7DC41D914DB20090AA66 /* Icon_Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Search@2x.png"; sourceTree = "<group>"; };
 		D2BF7DC51D914DB20090AA66 /* Icon_Search@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Search@3x.png"; sourceTree = "<group>"; };
-		D2BF7DCB1D914DB20090AA66 /* Logo_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_green.png; sourceTree = "<group>"; };
-		D2BF7DCC1D914DB20090AA66 /* Logo_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_green@2x.png"; sourceTree = "<group>"; };
-		D2BF7DCD1D914DB20090AA66 /* Logo_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo_green@3x.png"; sourceTree = "<group>"; };
 		D2BF7DCF1D914DB20090AA66 /* Chats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chats.png; sourceTree = "<group>"; };
 		D2BF7DD01D914DB20090AA66 /* Chats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chats@2x.png"; sourceTree = "<group>"; };
 		D2BF7DD11D914DB20090AA66 /* Chats@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chats@3x.png"; sourceTree = "<group>"; };
@@ -1792,9 +1792,9 @@
 		D2BF7DCA1D914DB20090AA66 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				D2BF7DCB1D914DB20090AA66 /* Logo_green.png */,
-				D2BF7DCC1D914DB20090AA66 /* Logo_green@2x.png */,
-				D2BF7DCD1D914DB20090AA66 /* Logo_green@3x.png */,
+				71BAD2101EE15F19001D8B6B /* Logo_green.png */,
+				71BAD2111EE15F19001D8B6B /* Logo_green@2x.png */,
+				71BAD20E1EE15DA9001D8B6B /* Logo_green@3x.png */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
@@ -2002,6 +2002,7 @@
 				D2BF7E7C1D914DB30090AA66 /* Button_Speaker disabled@3x.png in Resources */,
 				D2CAE2021D9A498B00B9A532 /* EMChatBaseCell.xib in Resources */,
 				D2BF7EA81D914DB30090AA66 /* Icon_Camera active@2x.png in Resources */,
+				71BAD20F1EE15DA9001D8B6B /* Logo_green@3x.png in Resources */,
 				D2BF7E2F1D914DB30090AA66 /* Icon_New chat.png in Resources */,
 				D2BF7E6E1D914DB30090AA66 /* Button_Mute active.png in Resources */,
 				D2BF7E551D914DB30090AA66 /* Button_Answer@3x.png in Resources */,
@@ -2047,7 +2048,6 @@
 				D2BF7E511D914DB30090AA66 /* Button_Upload Photo@2x.png in Resources */,
 				D2BF7E5F1D914DB30090AA66 /* Button_Cancel Call.png in Resources */,
 				D2BF7EE51D914DB30090AA66 /* Chats_active@3x.png in Resources */,
-				D2BF7EDC1D914DB30090AA66 /* Logo_green@3x.png in Resources */,
 				D2BF7F1E1D914DB30090AA66 /* logo4@3x.png in Resources */,
 				D2BF7EDD1D914DB30090AA66 /* Chats.png in Resources */,
 				D2BF7E591D914DB30090AA66 /* Button_Camera switch disabled.png in Resources */,
@@ -2098,6 +2098,7 @@
 				D2BF7EA01D914DB30090AA66 /* Button_Record@3x.png in Resources */,
 				716634701DB0EFB100C92E27 /* EMGroupMember_Invite_Cell.xib in Resources */,
 				D2BF7E3D1D914DB30090AA66 /* Swipe_Exit@3x.png in Resources */,
+				71BAD2121EE15F19001D8B6B /* Logo_green.png in Resources */,
 				D2BF7ED61D914DB30090AA66 /* Icon_Search@3x.png in Resources */,
 				D2BF7EA41D914DB30090AA66 /* Icon_Audio.png in Resources */,
 				D2BF7EA91D914DB30090AA66 /* Icon_Camera active@3x.png in Resources */,
@@ -2188,7 +2189,6 @@
 				D2BF7F091D914DB30090AA66 /* Button_Chat@3x.png in Resources */,
 				D2BF7EFB1D914DB30090AA66 /* Settings_active.png in Resources */,
 				D28360051D95009C00EC7A4A /* Icon_File_disable@2x.png in Resources */,
-				D2BF7EDB1D914DB30090AA66 /* Logo_green@2x.png in Resources */,
 				D2BF7E811D914DB30090AA66 /* Button_Stats disabled@2x.png in Resources */,
 				D2BF7ECA1D914DB30090AA66 /* Icon_Add@3x.png in Resources */,
 				D24328041DAB71BC00EDCDAB /* Icon_error.png in Resources */,
@@ -2226,7 +2226,6 @@
 				D2BF7E321D914DB30090AA66 /* Icon_New group.png in Resources */,
 				D2BF7E9C1D914DB30090AA66 /* Button_Record cancel@2x.png in Resources */,
 				D2BF7EDF1D914DB30090AA66 /* Chats@3x.png in Resources */,
-				D2BF7EDA1D914DB30090AA66 /* Logo_green.png in Resources */,
 				D2BF7E9E1D914DB30090AA66 /* Button_Record.png in Resources */,
 				D2BF7E631D914DB30090AA66 /* Button_Current Location@2x.png in Resources */,
 				D2BF7F121D914DB30090AA66 /* logo11@2x.png in Resources */,
@@ -2288,6 +2287,7 @@
 				716633F81DB0DE5600C92E27 /* feedback@3x.png in Resources */,
 				D2BF7E521D914DB30090AA66 /* Button_Upload Photo@3x.png in Resources */,
 				D28538761DB1EBB50027D4E1 /* EMAboutViewController.xib in Resources */,
+				71BAD2131EE15F19001D8B6B /* Logo_green@2x.png in Resources */,
 				D2BF7E821D914DB30090AA66 /* Button_Stats disabled@3x.png in Resources */,
 				D2BF7EEA1D914DB30090AA66 /* Contacts@2x.png in Resources */,
 				716633FA1DB0DE5600C92E27 /* message@2x.png in Resources */,
@@ -2338,7 +2338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		55F5D39191F1F5FF9BD4640B /* [CP] Embed Pods Frameworks */ = {
@@ -2609,6 +2609,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 499WYUV8Q2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2655,9 +2656,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: EaseMob Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 499WYUV8Q2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2670,6 +2672,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "f011dee6-5199-42f2-9195-826dae376311";
+				PROVISIONING_PROFILE_SPECIFIER = easemob_enterprise_chatdemoui_distribution;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2697,7 +2701,7 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.ZYDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2723,7 +2727,7 @@
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/ChatDemo-UI3.0/Code/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.enterprise.demo.ui;
+				PRODUCT_BUNDLE_IDENTIFIER = com.easemob.ZYDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

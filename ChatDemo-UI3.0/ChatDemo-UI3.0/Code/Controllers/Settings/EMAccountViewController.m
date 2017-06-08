@@ -134,7 +134,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
         
-        cell.textLabel.text = NSLocalizedString(@"setting.account.id", @"Hyphenate ID");
+        cell.textLabel.text = NSLocalizedString(@"setting.account.id", @"TestDemo ID");
         cell.detailTextLabel.text = [[EMClient sharedClient] currentUsername];
     }
     

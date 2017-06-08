@@ -15,7 +15,7 @@
 #import "EMChatViewController.h"
 
 #define NAME                NSLocalizedString(@"contact.name", @"Name")
-#define HYPHENATE_ID        NSLocalizedString(@"contact.hyphenateId", @"Hyphenate ID")
+#define HYPHENATE_ID        NSLocalizedString(@"contact.testDemoId", @"TestDemo ID")
 #define APNS_NICKNAME       NSLocalizedString(@"contact.apnsnickname", @"iOS APNS")
 #define DELETE_CONTACT      NSLocalizedString(@"contact.delete", @"Delete Contact")
 

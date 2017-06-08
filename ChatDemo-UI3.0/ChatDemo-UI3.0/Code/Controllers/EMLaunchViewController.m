@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     [self setBackgroundColor];
-    [self setLauchAnimation];
+//    [self setLauchAnimation];
     
     BOOL isAutoLogin = [EMClient sharedClient].isAutoLogin;
     if (isAutoLogin){

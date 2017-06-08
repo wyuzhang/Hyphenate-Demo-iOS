@@ -28,7 +28,7 @@
 
 //login
 "login.signup.tips" = "Have an account?";
-"login.tips" = "Yay! New to Hyphenate?";
+"login.tips" = "Yay! New to TestDemo?";
 "login.changebutton.signup" = "Sign up";
 "login.changebutton.login" = "Log in";
 "login.taken" = "Username taken";
@@ -88,6 +88,7 @@
 "setting.about.appversion" = "App Version";
 "setting.about.sdkversion" = "SDK Version";
 "setting.about.uiversion" = "EaseUI Library Version";
+"setting.emailLog" = "Email send logs";
 
 //setting.push
 "setting.push.getFailed" = "Get push status failed";
@@ -104,7 +105,7 @@
 
 //setting.account
 "setting.account.edit" = "Edit";
-"setting.account.id" = "Hyphenate ID";
+"setting.account.id" = "TestDemo ID";
 "setting.account.signout" = "Sign Out";
 "setting.account.name" = "Name";
 "setting.uploading" = "Uploading..";
@@ -123,7 +124,7 @@
 "loading.end" = "Loading completed...";
 
 //add contact
-"contact.enterHyphenateID" = "Enter Hyphenate ID";
+"contact.enterTestDemoID" = "Enter TestDemo ID";
 "contact.sendApplySuccess" = "Requested";
 "contact.sendApplyFail" = "send application fails, please operate again";
 "contact.noinput" = "No input contact name";
@@ -131,7 +132,7 @@
 "contact.addOwner" = "Not allowed to send their own friends to apply for";
 
 "contact.name" = "Name";
-"contact.hyphenateId" = "Hyphenate ID";
+"contact.testDemoId" = "TestDemo ID";
 "contact.apnsnickname" = "iOS APNS";
 "contact.block" = "Block Contact";
 "contact.blockFailure" = "Block failure";
@@ -216,3 +217,20 @@
 
 //network
 "network.disconnection" = "Network disconnection";
+
+
+//privateDeploy
+"privateDeploy.appkeyError" = "Appkey input error";
+"privateDeploy.imServerError" = "IM service address input error";
+"privateDeploy.restServerError" = "REST service address input error";
+"privateDeploy.dnsUrlError" = "DNS Url input error";
+
+
+//email send log
+"log.fetchPath" = "Fetch the compressed package path";
+"log.thisLog" = "This is the log";
+"log.sendLog" = "send the log";
+"log.cancel" = "Mail canceled";
+"log.sendSuccessfully" = "Mail send successfully";
+"log.saveSuccessfuuly" = "Mail save successfully";
+"log.sendFailure" = "Mail send failure";

@@ -197,6 +197,19 @@ static NSString *kGroupName = @"GroupName";
     }
 }
 
+- (BOOL)_needShowNotification:(NSString *)fromChatter
+{
+    BOOL ret = YES;
+    NSArray *igGroupIds = [[EMClient sharedClient].groupManager getGroupsWithoutPushNotification:nil];
+    for (NSString *str in igGroupIds) {
+        if ([str isEqualToString:fromChatter]) {
+            ret = NO;
+            break;
+        }
+    }
+    return ret;
+}
+
 #pragma mark - UITabBarDelegate
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
@@ -220,27 +233,29 @@ static NSString *kGroupName = @"GroupName";
 
 - (void)messagesDidReceive:(NSArray *)aMessages
 {
-    [self setupUnreadMessageCount];
-    
 #if !TARGET_IPHONE_SIMULATOR
     for (EMMessage *message in aMessages) {
         
-        UIApplicationState state = [[UIApplication sharedApplication] applicationState];
-        switch (state) {
-            case UIApplicationStateActive:
-                [self playSoundAndVibration];
-                break;
-            case UIApplicationStateInactive:
-                [self playSoundAndVibration];
-                break;
-            case UIApplicationStateBackground:
-                [self showNotificationWithMessage:message];
-                break;
-            default:
-                break;
+        BOOL needShowNotification = (message.chatType != EMChatTypeChat) ? [self _needShowNotification:message.conversationId] : YES;
+        if (needShowNotification) {
+            UIApplicationState state = [[UIApplication sharedApplication] applicationState];
+            switch (state) {
+                case UIApplicationStateActive:
+                    [self playSoundAndVibration];
+                    break;
+                case UIApplicationStateInactive:
+                    [self playSoundAndVibration];
+                    break;
+                case UIApplicationStateBackground:
+                    [self showNotificationWithMessage:message];
+                    break;
+                default:
+                    break;
+            }
         }
     }
 #endif
+    [self setupUnreadMessageCount];
 }
 
 - (void)conversationListDidUpdate:(NSArray *)aConversationList

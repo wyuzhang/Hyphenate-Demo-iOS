@@ -10,4 +10,12 @@
 
 @interface AppDelegate (PrivateDeploy)
 
+- (BOOL)isUsePrivateDeploy;
+
+- (BOOL)isUseDNSConfig;
+
+- (EMError *)initializeSDKWithPrivateDeploy;
+
+- (EMError *)initializeSDKWithDNSConfig;
+
 @end

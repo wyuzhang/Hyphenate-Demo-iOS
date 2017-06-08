@@ -18,6 +18,7 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import "AppDelegate+Parse.h"
+#import "AppDelegate+PrivateDeploy.h"
 
 @interface AppDelegate () <EMClientDelegate>
 
@@ -41,26 +42,37 @@
     [self parseApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     // init HyphenateSDK
-    EMOptions *options = [EMOptions optionsWithAppkey:@"hyphenatedemo#hyphenatedemo"];
-
-    // Hyphenate cert keys
-    NSString *apnsCertName = nil;
-    #if DEBUG
-        apnsCertName = @"DevelopmentCertificate";
-    #else
-        apnsCertName = @"ProductionCertificate";
-    #endif
-    
-    [options setApnsCertName:apnsCertName];
-    [options setEnableConsoleLog:YES];
-    [[EMClient sharedClient] initializeSDKWithOptions:options];
-    
+    if ([self isUsePrivateDeploy]) {
+        [self initializeSDKWithPrivateDeploy];
+    }
+    else if ([self isUseDNSConfig]) {
+        [self initializeSDKWithDNSConfig];
+    }
+    else {
+        EMOptions *options = [EMOptions optionsWithAppkey:@"easemob-demo#chatdemoui"];
+        
+        // Hyphenate cert keys
+        NSString *apnsCertName = nil;
+#if DEBUG
+        apnsCertName = @"chatdemoui_dev";
+#else
+        apnsCertName = @"chatdemoui";
+#endif
+        
+        [options setApnsCertName:apnsCertName];
+        [options setEnableConsoleLog:YES];
+        [options setUsingHttpsOnly:NO];
+        [options setIsAutoAcceptGroupInvitation:NO];
+        [[EMClient sharedClient] initializeSDKWithOptions:options];
+    }
+    [EMChatDemoHelper shareHelper];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(loginStateChange:)
                                                  name:KNOTIFICATION_LOGINCHANGE
                                                object:nil];
     
     [EaseCallManager sharedManager];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

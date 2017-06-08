@@ -56,7 +56,14 @@
 {
     CGSize textBlockMinSize = {TEXTLABEL_MAX_WIDTH, CGFLOAT_MAX};
     CGSize retSize;
-    NSString *text = [EMConvertToCommonEmoticonsHelper convertToSystemEmoticons:((EMTextMessageBody *)self.model.message.body).text];
+    EMMessageBody *body = self.model.message.body;
+    NSString *text = @"";
+    if ([body isKindOfClass:[EMTextMessageBody class]]) {
+        text = [EMConvertToCommonEmoticonsHelper convertToSystemEmoticons:((EMTextMessageBody *)self.model.message.body).text];
+    }
+    else if ([body isKindOfClass:[EMFileMessageBody class]]) {
+        text = [NSString stringWithFormat:@"(文件)%@",[(EMFileMessageBody *)body displayName]];
+    }
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:[[self class] lineSpacing]];
     retSize = [text boundingRectWithSize:textBlockMinSize options:NSStringDrawingUsesLineFragmentOrigin
@@ -79,7 +86,15 @@
 - (void)setModel:(EMMessageModel *)model
 {
     [super setModel:model];
-    NSString *text = [EMConvertToCommonEmoticonsHelper convertToSystemEmoticons:((EMTextMessageBody *)self.model.message.body).text];
+    EMMessageBody *body = self.model.message.body;
+    NSString *text = @"";
+    if ([body isKindOfClass:[EMTextMessageBody class]]) {
+        text = [EMConvertToCommonEmoticonsHelper convertToSystemEmoticons:((EMTextMessageBody *)self.model.message.body).text];
+    }
+    else if ([body isKindOfClass:[EMFileMessageBody class]]) {
+        text = [NSString stringWithFormat:@"(文件)%@",[(EMFileMessageBody *)body displayName]];
+    }
+    
     NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc]
                                                     initWithString:text];
     NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
