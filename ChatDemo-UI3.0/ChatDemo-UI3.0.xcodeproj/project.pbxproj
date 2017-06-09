@@ -114,6 +114,9 @@
 		71D4A1FD1D9C9359006FACB7 /* EMGroupTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D4A1F61D9C9359006FACB7 /* EMGroupTitleCell.xib */; };
 		71FEAA8C1EEA094800D253FA /* AppDelegate+PrivateDeploy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FEAA8B1EEA094800D253FA /* AppDelegate+PrivateDeploy.m */; };
 		71FEAA8E1EEA096200D253FA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71FEAA8D1EEA096200D253FA /* Settings.bundle */; };
+		71FEAB4C1EEA182800D253FA /* EMChatDemoHelper+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FEAB441EEA182800D253FA /* EMChatDemoHelper+Category.m */; };
+		71FEAB4D1EEA182800D253FA /* EMMainViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FEAB461EEA182800D253FA /* EMMainViewController+Category.m */; };
+		71FEAB4E1EEA182800D253FA /* EMChatBaseCell+Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FEAB491EEA182800D253FA /* EMChatBaseCell+Link.m */; };
 		C4D616A01E08B42C00E108A2 /* EMChatEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6169F1E08B42C00E108A2 /* EMChatEmojiView.m */; };
 		C4D616A21E08B4AC00E108A2 /* EMChatEmojiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D616A11E08B4AC00E108A2 /* EMChatEmojiView.xib */; };
 		D20E26D71DCA011C00B3FAC6 /* icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = D20E26D41DCA011C00B3FAC6 /* icon_info.png */; };
@@ -633,6 +636,13 @@
 		71FEAA8A1EEA094800D253FA /* AppDelegate+PrivateDeploy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PrivateDeploy.h"; sourceTree = "<group>"; };
 		71FEAA8B1EEA094800D253FA /* AppDelegate+PrivateDeploy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PrivateDeploy.m"; sourceTree = "<group>"; };
 		71FEAA8D1EEA096200D253FA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		71FEAB431EEA182800D253FA /* EMChatDemoHelper+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMChatDemoHelper+Category.h"; sourceTree = "<group>"; };
+		71FEAB441EEA182800D253FA /* EMChatDemoHelper+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMChatDemoHelper+Category.m"; sourceTree = "<group>"; };
+		71FEAB451EEA182800D253FA /* EMMainViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMMainViewController+Category.h"; sourceTree = "<group>"; };
+		71FEAB461EEA182800D253FA /* EMMainViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMMainViewController+Category.m"; sourceTree = "<group>"; };
+		71FEAB481EEA182800D253FA /* EMChatBaseCell+Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMChatBaseCell+Link.h"; sourceTree = "<group>"; };
+		71FEAB491EEA182800D253FA /* EMChatBaseCell+Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMChatBaseCell+Link.m"; sourceTree = "<group>"; };
+		71FEAB4B1EEA182800D253FA /* DefineKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineKey.h; sourceTree = "<group>"; };
 		C4D6169E1E08B42C00E108A2 /* EMChatEmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatEmojiView.h; sourceTree = "<group>"; };
 		C4D6169F1E08B42C00E108A2 /* EMChatEmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMChatEmojiView.m; sourceTree = "<group>"; };
 		C4D616A11E08B4AC00E108A2 /* EMChatEmojiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMChatEmojiView.xib; sourceTree = "<group>"; };
@@ -1348,6 +1358,36 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		71FEAB421EEA182800D253FA /* ZYDCategory */ = {
+			isa = PBXGroup;
+			children = (
+				71FEAB431EEA182800D253FA /* EMChatDemoHelper+Category.h */,
+				71FEAB441EEA182800D253FA /* EMChatDemoHelper+Category.m */,
+				71FEAB451EEA182800D253FA /* EMMainViewController+Category.h */,
+				71FEAB461EEA182800D253FA /* EMMainViewController+Category.m */,
+				71FEAB471EEA182800D253FA /* Link */,
+				71FEAB4A1EEA182800D253FA /* Utils */,
+			);
+			path = ZYDCategory;
+			sourceTree = "<group>";
+		};
+		71FEAB471EEA182800D253FA /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				71FEAB481EEA182800D253FA /* EMChatBaseCell+Link.h */,
+				71FEAB491EEA182800D253FA /* EMChatBaseCell+Link.m */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		71FEAB4A1EEA182800D253FA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71FEAB4B1EEA182800D253FA /* DefineKey.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		99DF95DCA2AC5B81AFA5B910 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1528,6 +1568,7 @@
 		D28345241D8FEE3F00FD48A9 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				71FEAB421EEA182800D253FA /* ZYDCategory */,
 				71D4A1D71D9C9284006FACB7 /* View */,
 				71D4A1D21D9C923D006FACB7 /* Model */,
 				D2BF7CC01D9111DA0090AA66 /* Utilities */,
@@ -2545,6 +2586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEBE4541E79554F00B82986 /* EaseCallManager.m in Sources */,
+				71FEAB4D1EEA182800D253FA /* EMMainViewController+Category.m in Sources */,
 				3AEBE4571E79554F00B82986 /* EaseCallViewController.m in Sources */,
 				3AEBE4581E79554F00B82986 /* EaseVideoInfoViewController.m in Sources */,
 				3A79D10A1E77AAF40085AB6E /* EMGroupInfoViewController.m in Sources */,
@@ -2583,6 +2625,7 @@
 				D24327E31DAA395F00EDCDAB /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				3AEBE3EA1E78F72C00B82986 /* EMAlertView.m in Sources */,
 				D2CAE2051D9A4CCB00B9A532 /* EMChatBaseCell.m in Sources */,
+				71FEAB4C1EEA182800D253FA /* EMChatDemoHelper+Category.m in Sources */,
 				71D4A1D11D9C9229006FACB7 /* UIImage+ImageEffect.m in Sources */,
 				71D4A1EA1D9C934C006FACB7 /* EMContactInfoViewController.m in Sources */,
 				716634061DB0E03F00C92E27 /* EMChatDemoHelper.m in Sources */,
@@ -2606,6 +2649,7 @@
 				D2F372A81DD06DF400C726E7 /* EMFaceView.m in Sources */,
 				3A4BB1CA1ED43D7700B07FCA /* EMChatroomAdminsViewController.m in Sources */,
 				71FEAA8C1EEA094800D253FA /* AppDelegate+PrivateDeploy.m in Sources */,
+				71FEAB4E1EEA182800D253FA /* EMChatBaseCell+Link.m in Sources */,
 				3A4BB1B01ED3DD6F00B07FCA /* EMChatroomCell.m in Sources */,
 				D24327F11DAA444C00EDCDAB /* UIViewController+DismissKeyboard.m in Sources */,
 				3A79D0FD1E7796540085AB6E /* EMMemberCell.m in Sources */,
