@@ -51,6 +51,11 @@
 		7139032E1EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903291EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m */; };
 		7139032F1EEA5AC500864B81 /* EMPromptCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139032B1EEA5AC500864B81 /* EMPromptCell.m */; };
 		713903301EEA5AC500864B81 /* EMPromptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7139032C1EEA5AC500864B81 /* EMPromptCell.xib */; };
+		713903581EEA77B100864B81 /* NoticeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903511EEA77B100864B81 /* NoticeInfoViewController.m */; };
+		713903591EEA77B100864B81 /* NoticeInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713903521EEA77B100864B81 /* NoticeInfoViewController.xib */; };
+		7139035A1EEA77B100864B81 /* NoticeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903541EEA77B100864B81 /* NoticeTableViewCell.m */; };
+		7139035B1EEA77B100864B81 /* NoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713903551EEA77B100864B81 /* NoticeTableViewCell.xib */; };
+		7139035C1EEA77B100864B81 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903571EEA77B100864B81 /* NoticeViewController.m */; };
 		7140373D1DCEA2E90041353D /* NSObject+EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7140373C1DCEA2E90041353D /* NSObject+EMAlertView.m */; };
 		714E9DC31DD32B0A009D1E2D /* default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E9DC11DD32B0A009D1E2D /* default_avatar.png */; };
 		714E9DC41DD32B0A009D1E2D /* default_avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E9DC21DD32B0A009D1E2D /* default_avatar@3x.png */; };
@@ -539,6 +544,14 @@
 		7139032A1EEA5AC500864B81 /* EMPromptCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMPromptCell.h; sourceTree = "<group>"; };
 		7139032B1EEA5AC500864B81 /* EMPromptCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMPromptCell.m; sourceTree = "<group>"; };
 		7139032C1EEA5AC500864B81 /* EMPromptCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMPromptCell.xib; sourceTree = "<group>"; };
+		713903501EEA77B100864B81 /* NoticeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeInfoViewController.h; sourceTree = "<group>"; };
+		713903511EEA77B100864B81 /* NoticeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeInfoViewController.m; sourceTree = "<group>"; };
+		713903521EEA77B100864B81 /* NoticeInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeInfoViewController.xib; sourceTree = "<group>"; };
+		713903531EEA77B100864B81 /* NoticeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeTableViewCell.h; sourceTree = "<group>"; };
+		713903541EEA77B100864B81 /* NoticeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeTableViewCell.m; sourceTree = "<group>"; };
+		713903551EEA77B100864B81 /* NoticeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeTableViewCell.xib; sourceTree = "<group>"; };
+		713903561EEA77B100864B81 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		713903571EEA77B100864B81 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
 		7140373B1DCEA2E90041353D /* NSObject+EMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EMAlertView.h"; sourceTree = "<group>"; };
 		7140373C1DCEA2E90041353D /* NSObject+EMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EMAlertView.m"; sourceTree = "<group>"; };
 		714E9DC11DD32B0A009D1E2D /* default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avatar.png; sourceTree = "<group>"; };
@@ -1209,6 +1222,21 @@
 			path = GroupMember;
 			sourceTree = "<group>";
 		};
+		7139034F1EEA77B100864B81 /* Notices */ = {
+			isa = PBXGroup;
+			children = (
+				713903501EEA77B100864B81 /* NoticeInfoViewController.h */,
+				713903511EEA77B100864B81 /* NoticeInfoViewController.m */,
+				713903521EEA77B100864B81 /* NoticeInfoViewController.xib */,
+				713903531EEA77B100864B81 /* NoticeTableViewCell.h */,
+				713903541EEA77B100864B81 /* NoticeTableViewCell.m */,
+				713903551EEA77B100864B81 /* NoticeTableViewCell.xib */,
+				713903561EEA77B100864B81 /* NoticeViewController.h */,
+				713903571EEA77B100864B81 /* NoticeViewController.m */,
+			);
+			path = Notices;
+			sourceTree = "<group>";
+		};
 		716633E31DB0DE1F00C92E27 /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
@@ -1390,6 +1418,7 @@
 				71FEAB441EEA182800D253FA /* EMChatDemoHelper+Category.m */,
 				71FEAB451EEA182800D253FA /* EMMainViewController+Category.h */,
 				71FEAB461EEA182800D253FA /* EMMainViewController+Category.m */,
+				7139034F1EEA77B100864B81 /* Notices */,
 				713903251EEA5AC500864B81 /* GroupMember */,
 				71FEAB471EEA182800D253FA /* Link */,
 				71FEAB4A1EEA182800D253FA /* Utils */,
@@ -2257,6 +2286,7 @@
 				716633EF1DB0DE1F00C92E27 /* addContact_enable@3x.png in Resources */,
 				713903301EEA5AC500864B81 /* EMPromptCell.xib in Resources */,
 				D2BF7E471D914DB30090AA66 /* Button_Delete.png in Resources */,
+				713903591EEA77B100864B81 /* NoticeInfoViewController.xib in Resources */,
 				3A79D1021E77970C0085AB6E /* shape_right@2x.png in Resources */,
 				716633EA1DB0DE1F00C92E27 /* addContact_disable.png in Resources */,
 				D2BF7E511D914DB30090AA66 /* Button_Upload Photo@2x.png in Resources */,
@@ -2295,6 +2325,7 @@
 				3AEBE3EF1E792ED400B82986 /* EMGroupPermissionCell.xib in Resources */,
 				D2BF7E481D914DB30090AA66 /* Button_Delete@2x.png in Resources */,
 				D2835FFD1D94FFD800EC7A4A /* Icon_Audio_disable@3x.png in Resources */,
+				7139035B1EEA77B100864B81 /* NoticeTableViewCell.xib in Resources */,
 				D22B7A321DB0F93300C8DD40 /* iconCall@3x.png in Resources */,
 				D2BF7EE41D914DB30090AA66 /* Chats_active@2x.png in Resources */,
 				D2BF7E861D914DB30090AA66 /* Icon_Call.png in Resources */,
@@ -2620,6 +2651,7 @@
 				3A79D10A1E77AAF40085AB6E /* EMGroupInfoViewController.m in Sources */,
 				D2426AEE1DCCAD14009C1632 /* UIViewController+HUD.m in Sources */,
 				D2AD8EB11DB4BDA800A0DD3C /* EMRealtimeSearchUtil.m in Sources */,
+				7139035C1EEA77B100864B81 /* NoticeViewController.m in Sources */,
 				D28538921DB20C770027D4E1 /* EMLoginViewController.m in Sources */,
 				D28538911DB20C4D0027D4E1 /* EMContactsViewController.m in Sources */,
 				D29502741DBB2BF3001B9954 /* EMMessageModel.m in Sources */,
@@ -2660,6 +2692,7 @@
 				71D4A1EA1D9C934C006FACB7 /* EMContactInfoViewController.m in Sources */,
 				716634061DB0E03F00C92E27 /* EMChatDemoHelper.m in Sources */,
 				7166343E1DB0EC9100C92E27 /* EMCreateViewController.m in Sources */,
+				713903581EEA77B100864B81 /* NoticeInfoViewController.m in Sources */,
 				3A79D1161E77AB080085AB6E /* EMGroupBansViewController.m in Sources */,
 				3AEBE3EE1E792ED400B82986 /* EMGroupPermissionCell.m in Sources */,
 				716634071DB0E03F00C92E27 /* EMRealtimeSearchUtils.m in Sources */,
@@ -2696,6 +2729,7 @@
 				D24327E01DAA395F00EDCDAB /* EMAudioRecorderUtil.m in Sources */,
 				C4D616A01E08B42C00E108A2 /* EMChatEmojiView.m in Sources */,
 				D24327E21DAA395F00EDCDAB /* EMCDDeviceManager+Microphone.m in Sources */,
+				7139035A1EEA77B100864B81 /* NoticeTableViewCell.m in Sources */,
 				D28538771DB1EBB50027D4E1 /* EMAccountViewController.m in Sources */,
 				D2AA4DED1D92746800967E0E /* EMChatsCell.m in Sources */,
 				D285387C1DB1EBB50027D4E1 /* EMPushNotificationViewController.m in Sources */,

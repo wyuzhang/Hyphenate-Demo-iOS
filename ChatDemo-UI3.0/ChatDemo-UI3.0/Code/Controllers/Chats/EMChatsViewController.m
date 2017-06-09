@@ -84,7 +84,7 @@
 {
     if (_networkStateView == nil) {
         _networkStateView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 44)];
-
+        
         _networkStateView.backgroundColor = KermitGreenTwoColor;
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, (_networkStateView.frame.size.height - 20) / 2, 20, 20)];
@@ -175,15 +175,27 @@
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        EMConversationModel *model = [self.dataSource objectAtIndex:indexPath.row];
-        WEAK_SELF
-        [[EMClient sharedClient].chatManager deleteConversation:model.conversation.conversationId isDeleteMessages:YES completion:^(NSString *aConversationId, EMError *aError) {
+// cell 侧滑显示的item
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EMConversationModel *model = self.dataSource[indexPath.row];
+    WEAK_SELF
+    UITableViewRowAction *rowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [model removeComplation:^{
+            
             [weakSelf.dataSource removeObjectAtIndex:indexPath.row];
+//            [weakSelf tableViewDidTriggerHeaderRefresh];
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }];
-    }
+    }];
+    
+    rowAction.backgroundColor = [UIColor redColor];
+    NSString *topStr = model.isTop? @"取消置顶" : @"置顶";
+    UITableViewRowAction *rowaction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:topStr handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [model setIsTop:!model.isTop];
+        [weakSelf tableViewDidTriggerHeaderRefresh];
+    }];
+    rowaction.backgroundColor = [UIColor blueColor];
+    return @[rowAction,rowaction];
 }
 
 #pragma mark - Table view delegate
@@ -267,14 +279,36 @@
     WEAK_SELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSArray *conversations = [[EMClient sharedClient].chatManager getAllConversations];
-        NSArray* sorted = [weakSelf _sortConversationList:conversations];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.dataSource removeAllObjects];
-            for (EMConversation *conversation in sorted) {
-                EMConversationModel *model = [[EMConversationModel alloc] initWithConversation:conversation];
-                [weakSelf.dataSource addObject:model];
+        NSArray* sorted = [conversations sortedArrayUsingComparator:
+                           ^(EMConversation *obj1, EMConversation* obj2){
+                               if(obj1.latestMessage.timestamp > obj2.latestMessage.timestamp) {
+                                   return(NSComparisonResult)NSOrderedAscending;
+                               }else {
+                                   return(NSComparisonResult)NSOrderedDescending;
+                               }
+                           }];
+        
+        NSMutableArray *tmpAry = [NSMutableArray array];
+        NSMutableArray *topAry = [NSMutableArray array];
+        NSMutableArray *ret = [NSMutableArray array];
+        
+        for (EMConversation *conversation in sorted) {
+            EMConversationModel *model = [[EMConversationModel alloc] initWithConversation:conversation];
+            model.conversation = conversation;
+            
+            if (model.isTop) {
+                [topAry addObject:model];
+            }else {
+                [tmpAry addObject:model];
             }
-            [self tableViewDidFinishTriggerHeader:YES];
+        }
+        
+        [ret addObjectsFromArray:topAry];
+        [ret addObjectsFromArray:tmpAry];
+ 
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.dataSource = ret;
+            [weakSelf tableViewDidFinishTriggerHeader:YES];
             [weakSelf.tableView reloadData];
         });
     });
@@ -311,7 +345,7 @@
     [self tableViewDidTriggerHeaderRefresh];
 }
 
-#pragma mark - public 
+#pragma mark - public
 
 - (void)setupNavigationItem:(UINavigationItem *)navigationItem
 {
@@ -341,7 +375,22 @@
                                return(NSComparisonResult)NSOrderedDescending;
                            }
                        }];
-    return  sorted;
+    NSMutableArray *tmpAry = [NSMutableArray array];
+    NSMutableArray *topAry = [NSMutableArray array];
+    NSMutableArray *ret = [NSMutableArray array];
+    
+    for (EMConversation *conversation in sorted) {
+        
+        if ([conversation.ext[@"isTop"] boolValue]) {
+            [topAry addObject:conversation];
+        }else {
+            [tmpAry addObject:conversation];
+        }
+    }
+    
+    [ret addObjectsFromArray:topAry];
+    [ret addObjectsFromArray:tmpAry];
+    return  ret;
 }
 
 @end

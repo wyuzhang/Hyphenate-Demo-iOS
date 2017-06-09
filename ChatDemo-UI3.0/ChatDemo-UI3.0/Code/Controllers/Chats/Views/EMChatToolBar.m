@@ -388,4 +388,11 @@
     }
 }
 
+- (void)setupInputTextInfo:(NSString *)inputInfo {
+    self.inputTextView.text = inputInfo;
+}
+
+- (NSString *)fetchInputTextInfo {
+    return self.inputTextView.text;
+}
 @end

@@ -14,6 +14,11 @@
 @property (nonatomic, copy) NSString* title;
 @property (nonatomic, strong) EMConversation *conversation;
 
+
 - (instancetype)initWithConversation:(EMConversation*)conversation;
+
+- (BOOL)isTop;
+- (void)setIsTop:(BOOL)isTop;
+- (void)removeComplation:(void(^)())aComplation;
 
 @end

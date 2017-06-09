@@ -23,6 +23,8 @@
 
 - (void)didSelectLocation;
 
+- (void)didUpdateInputTextInfo:(NSString *)info;
+
 @required
 
 - (void)chatToolBarDidChangeFrameToHeight:(CGFloat)toHeight;
@@ -33,4 +35,6 @@
 
 @property (weak, nonatomic) id<EMChatToolBarDelegate> delegate;
 
+- (void)setupInputTextInfo:(NSString *)inputInfo;
+- (NSString *)fetchInputTextInfo;
 @end

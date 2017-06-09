@@ -29,6 +29,7 @@
 #import "EMChatroomInfoViewController.h"
 #import "UIViewController+HUD.h"
 #import "NSObject+EMAlertView.h"
+#import "EMAlertView.h"
 
 @interface EMChatViewController () <EMChatToolBarDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate,EMLocationViewDelegate,EMChatManagerDelegate, EMChatroomManagerDelegate,EMChatBaseCellDelegate,UIActionSheetDelegate>
 
@@ -43,6 +44,7 @@
 @property (strong, nonatomic) UIButton *camButton;
 @property (strong, nonatomic) UIButton *photoButton;
 @property (strong, nonatomic) UIButton *detailButton;
+@property (strong, nonatomic) UIButton *deleteButton;
 @property (strong, nonatomic) NSIndexPath *longPressIndexPath;
 
 @property (strong, nonatomic) EMConversation *conversation;
@@ -81,6 +83,8 @@
     [self.tableView addSubview:self.refresh];
     
     self.chatToolBar.delegate = self;
+    [self.chatToolBar setupInputTextInfo:self.conversation.ext[@"Draft"]];
+    
     [self tableViewDidTriggerHeaderRefresh];
     
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
@@ -114,10 +118,19 @@
                                                object:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSMutableDictionary *dic = [self.conversation.ext mutableCopy];
+    if(!dic) dic = [NSMutableDictionary dictionary];
+    dic[@"Draft"] = [self.chatToolBar fetchInputTextInfo];
+    self.conversation.ext = dic;
+}
+
 - (void)dealloc
 {
     // delete the conversation if no message found
-    if (_conversation.latestMessage == nil) {
+    NSString *draft = _conversation.ext[@"Draft"];
+    if (_conversation.latestMessage == nil && draft.length == 0) {
         [[EMClient sharedClient].chatManager deleteConversation:_conversation.conversationId isDeleteMessages:YES completion:nil];
     }
     
@@ -135,7 +148,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.backButton];
     
     if (_conversation.type == EMConversationTypeChat) {
-        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.photoButton],[[UIBarButtonItem alloc] initWithCustomView:self.camButton]];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.deleteButton];
+//        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.photoButton],[[UIBarButtonItem alloc] initWithCustomView:self.camButton]];
         self.title = [[EMUserProfileManager sharedInstance] getNickNameWithUsername:_conversation.conversationId];
     } else if (_conversation.type == EMConversationTypeGroupChat) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.detailButton];
@@ -171,6 +185,21 @@
         [_backButton setImage:[UIImage imageNamed:@"Icon_Back"] forState:UIControlStateNormal];
     }
     return _backButton;
+}
+
+- (UIButton *)deleteButton
+{
+    if (_deleteButton == nil) {
+        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _deleteButton.frame = CGRectMake(0, 0, 44, 44);
+        _deleteButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        [_deleteButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_deleteButton setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [_deleteButton setTitle:@"清空" forState:UIControlStateNormal];
+        [_deleteButton setTitle:@"清空" forState:UIControlStateHighlighted];
+        [_deleteButton addTarget:self action:@selector(deleteMessages:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _deleteButton;
 }
 
 - (UIButton*)camButton
@@ -683,6 +712,18 @@
     }
 }
 
+- (void)deleteMessages:(id)sender {
+    WEAK_SELF
+    [EMAlertView showAlertWithTitle:NSLocalizedString(@"button.prompt", @"Prompt")
+                            message:NSLocalizedString(@"chat.clearMsg", @"Do you want to delete all messages?")
+                    completionBlock:^(NSUInteger buttonIndex, EMAlertView *alertView) {
+                        if (buttonIndex == 1) {
+                            [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATIONNAME_DELETEALLMESSAGE object:weakSelf.conversationId];
+                        }
+                    } cancelButtonTitle:NSLocalizedString(@"button.cancel", @"Cancel")
+                  otherButtonTitles:NSLocalizedString(@"button.ok", @"OK"), nil];
+}
+
 - (void)backAction
 {
     if (_conversation.type == EMConversationTypeChatRoom) {
@@ -702,6 +743,9 @@
     }
 }
 
+
+
+
 - (void)deleteAllMessages:(id)sender
 {
     if (self.dataSource.count == 0) {
@@ -711,7 +755,7 @@
     if ([sender isKindOfClass:[NSNotification class]]) {
         NSString *groupId = (NSString *)[(NSNotification *)sender object];
         BOOL isDelete = [groupId isEqualToString:self.conversation.conversationId];
-        if (self.conversation.type != EMConversationTypeChat && isDelete) {
+        if (isDelete) {
             [self.conversation deleteAllMessages:nil];
             [self.dataSource removeAllObjects];
             

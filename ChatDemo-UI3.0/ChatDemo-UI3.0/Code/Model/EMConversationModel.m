@@ -50,4 +50,25 @@
     }
 }
 
+- (BOOL)isTop {
+    return [self.conversation.ext[@"isTop"] boolValue];
+}
+
+- (void)setIsTop:(BOOL)isTop {
+    NSMutableDictionary *dic = [self.conversation.ext mutableCopy];
+    if (!dic) {
+        dic = [NSMutableDictionary dictionary];
+    }
+    dic[@"isTop"] = isTop ? @YES : @NO;
+    self.conversation.ext = dic;
+}
+
+- (void)removeComplation:(void(^)())aComplation {
+    [[EMClient sharedClient].chatManager deleteConversation:self.conversation.conversationId isDeleteMessages:YES completion:^(NSString *aConversationId, EMError *aError) {
+        if (aComplation) {
+            aComplation();
+        }
+    }];
+}
+
 @end

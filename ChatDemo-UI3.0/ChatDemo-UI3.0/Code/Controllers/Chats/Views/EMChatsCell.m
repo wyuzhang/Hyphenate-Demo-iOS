@@ -52,7 +52,9 @@
         _headImageView.image = [UIImage imageNamed:@"default_group_avatar"];
     }
     _nameLabel.text = model.title;
-    _contentLabel.text = [self _latestMessageTitleWithConversation:model.conversation];
+    
+    NSString *draft = model.conversation.ext[@"Draft"];
+    _contentLabel.text = draft && draft.length > 0 ? [NSString stringWithFormat:@"[草稿]%@",draft] : [self _latestMessageTitleWithConversation:model.conversation];
     _timeLabel.text = [self _latestMessageTimeWithConversation:model.conversation];
 }
 

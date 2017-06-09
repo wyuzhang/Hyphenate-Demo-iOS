@@ -53,25 +53,25 @@
 - (void)ZYDViewDidLoad {
     [self ZYDViewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didReceiveNotices:)
-                                                 name:@"haveReceiveNotices"
-                                               object:nil];
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-    self.lightView = [[UIView alloc] initWithFrame:CGRectMake(35, 8, 10, 10)];
-    self.lightView.backgroundColor = [UIColor redColor];
-    self.lightView.layer.cornerRadius = 5;
-    self.lightView.layer.masksToBounds = YES;
-    [btn addSubview:self.lightView];
-    [self lightOff];
-    
-    
-    [btn setTitle:@"公告" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(noticeViewController) forControlEvents:UIControlEventTouchUpInside];
-    self.noticeItem  = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    self.title = NSLocalizedString(@"title.conversation", @"Conversations");
-    self.navigationItem.rightBarButtonItem = self.noticeItem;
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(didReceiveNotices:)
+//                                                 name:@"haveReceiveNotices"
+//                                               object:nil];
+//    
+//    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
+//    self.lightView = [[UIView alloc] initWithFrame:CGRectMake(35, 8, 10, 10)];
+//    self.lightView.backgroundColor = [UIColor redColor];
+//    self.lightView.layer.cornerRadius = 5;
+//    self.lightView.layer.masksToBounds = YES;
+//    [btn addSubview:self.lightView];
+//    [self lightOff];
+//    
+//    
+//    [btn setTitle:@"公告" forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(noticeViewController) forControlEvents:UIControlEventTouchUpInside];
+//    self.noticeItem  = [[UIBarButtonItem alloc] initWithCustomView:btn];
+//    self.title = NSLocalizedString(@"title.conversation", @"Conversations");
+//    self.navigationItem.rightBarButtonItem = self.noticeItem;
 }
 
 - (void)lightOn{
@@ -90,19 +90,19 @@
     }
 }
 - (void)ZYDTabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    if(item.tag == 0) {
-        self.title = NSLocalizedString(@"title.conversation", @"Conversations");
-        self.navigationItem.rightBarButtonItem = self.noticeItem;
-        return;
-    }
+//    if(item.tag == 0) {
+//        self.title = NSLocalizedString(@"title.conversation", @"Conversations");
+//        self.navigationItem.rightBarButtonItem = self.noticeItem;
+//        return;
+//    }
     
     [self ZYDTabBar:tabBar didSelectItem:item];
 }
 
-- (void)noticeViewController {
+//- (void)noticeViewController {
 //    NoticeViewController *noticeVC = [[NoticeViewController alloc] initWithStyle:UITableViewStylePlain];
 //    [self.navigationController pushViewController:noticeVC animated:YES];
-}
+//}
 
 - (void)ZYDSetupUnreadMessageCount{
     NSArray *conversations = [[EMClient sharedClient].chatManager getAllConversations];
