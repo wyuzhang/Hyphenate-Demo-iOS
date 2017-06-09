@@ -47,6 +47,10 @@
 		3AEBE4571E79554F00B82986 /* EaseCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBE44C1E79554F00B82986 /* EaseCallViewController.m */; };
 		3AEBE4581E79554F00B82986 /* EaseVideoInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBE44E1E79554F00B82986 /* EaseVideoInfoViewController.m */; };
 		711159011DB7278B005158BB /* NSArray+EMSortContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 711159001DB7278B005158BB /* NSArray+EMSortContacts.m */; };
+		7139032D1EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903271EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.m */; };
+		7139032E1EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 713903291EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m */; };
+		7139032F1EEA5AC500864B81 /* EMPromptCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7139032B1EEA5AC500864B81 /* EMPromptCell.m */; };
+		713903301EEA5AC500864B81 /* EMPromptCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7139032C1EEA5AC500864B81 /* EMPromptCell.xib */; };
 		7140373D1DCEA2E90041353D /* NSObject+EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7140373C1DCEA2E90041353D /* NSObject+EMAlertView.m */; };
 		714E9DC31DD32B0A009D1E2D /* default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E9DC11DD32B0A009D1E2D /* default_avatar.png */; };
 		714E9DC41DD32B0A009D1E2D /* default_avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 714E9DC21DD32B0A009D1E2D /* default_avatar@3x.png */; };
@@ -528,6 +532,13 @@
 		6CD1B189658F9B85B7BFA9CD /* libPods-ChatDemo-UI3.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatDemo-UI3.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		711158FF1DB7278B005158BB /* NSArray+EMSortContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+EMSortContacts.h"; sourceTree = "<group>"; };
 		711159001DB7278B005158BB /* NSArray+EMSortContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EMSortContacts.m"; sourceTree = "<group>"; };
+		713903261EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMChatDemoHelper+GroupMemberChange.h"; sourceTree = "<group>"; };
+		713903271EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMChatDemoHelper+GroupMemberChange.m"; sourceTree = "<group>"; };
+		713903281EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMChatViewController+GroupMemberChange.h"; sourceTree = "<group>"; };
+		713903291EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMChatViewController+GroupMemberChange.m"; sourceTree = "<group>"; };
+		7139032A1EEA5AC500864B81 /* EMPromptCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMPromptCell.h; sourceTree = "<group>"; };
+		7139032B1EEA5AC500864B81 /* EMPromptCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMPromptCell.m; sourceTree = "<group>"; };
+		7139032C1EEA5AC500864B81 /* EMPromptCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMPromptCell.xib; sourceTree = "<group>"; };
 		7140373B1DCEA2E90041353D /* NSObject+EMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EMAlertView.h"; sourceTree = "<group>"; };
 		7140373C1DCEA2E90041353D /* NSObject+EMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EMAlertView.m"; sourceTree = "<group>"; };
 		714E9DC11DD32B0A009D1E2D /* default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default_avatar.png; sourceTree = "<group>"; };
@@ -1184,6 +1195,20 @@
 			path = Call;
 			sourceTree = "<group>";
 		};
+		713903251EEA5AC500864B81 /* GroupMember */ = {
+			isa = PBXGroup;
+			children = (
+				713903261EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.h */,
+				713903271EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.m */,
+				713903281EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.h */,
+				713903291EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m */,
+				7139032A1EEA5AC500864B81 /* EMPromptCell.h */,
+				7139032B1EEA5AC500864B81 /* EMPromptCell.m */,
+				7139032C1EEA5AC500864B81 /* EMPromptCell.xib */,
+			);
+			path = GroupMember;
+			sourceTree = "<group>";
+		};
 		716633E31DB0DE1F00C92E27 /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,6 +1390,7 @@
 				71FEAB441EEA182800D253FA /* EMChatDemoHelper+Category.m */,
 				71FEAB451EEA182800D253FA /* EMMainViewController+Category.h */,
 				71FEAB461EEA182800D253FA /* EMMainViewController+Category.m */,
+				713903251EEA5AC500864B81 /* GroupMember */,
 				71FEAB471EEA182800D253FA /* Link */,
 				71FEAB4A1EEA182800D253FA /* Utils */,
 			);
@@ -2229,6 +2255,7 @@
 				D2BF7EB11D914DB30090AA66 /* Icon_File@2x.png in Resources */,
 				D2BF7E541D914DB30090AA66 /* Button_Answer@2x.png in Resources */,
 				716633EF1DB0DE1F00C92E27 /* addContact_enable@3x.png in Resources */,
+				713903301EEA5AC500864B81 /* EMPromptCell.xib in Resources */,
 				D2BF7E471D914DB30090AA66 /* Button_Delete.png in Resources */,
 				3A79D1021E77970C0085AB6E /* shape_right@2x.png in Resources */,
 				716633EA1DB0DE1F00C92E27 /* addContact_disable.png in Resources */,
@@ -2588,6 +2615,7 @@
 				3AEBE4541E79554F00B82986 /* EaseCallManager.m in Sources */,
 				71FEAB4D1EEA182800D253FA /* EMMainViewController+Category.m in Sources */,
 				3AEBE4571E79554F00B82986 /* EaseCallViewController.m in Sources */,
+				7139032F1EEA5AC500864B81 /* EMPromptCell.m in Sources */,
 				3AEBE4581E79554F00B82986 /* EaseVideoInfoViewController.m in Sources */,
 				3A79D10A1E77AAF40085AB6E /* EMGroupInfoViewController.m in Sources */,
 				D2426AEE1DCCAD14009C1632 /* UIViewController+HUD.m in Sources */,
@@ -2624,7 +2652,9 @@
 				3A79D1211E77E4F80085AB6E /* EMGroupUpdateSubjectViewController.m in Sources */,
 				D24327E31DAA395F00EDCDAB /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				3AEBE3EA1E78F72C00B82986 /* EMAlertView.m in Sources */,
+				7139032E1EEA5AC500864B81 /* EMChatViewController+GroupMemberChange.m in Sources */,
 				D2CAE2051D9A4CCB00B9A532 /* EMChatBaseCell.m in Sources */,
+				7139032D1EEA5AC500864B81 /* EMChatDemoHelper+GroupMemberChange.m in Sources */,
 				71FEAB4C1EEA182800D253FA /* EMChatDemoHelper+Category.m in Sources */,
 				71D4A1D11D9C9229006FACB7 /* UIImage+ImageEffect.m in Sources */,
 				71D4A1EA1D9C934C006FACB7 /* EMContactInfoViewController.m in Sources */,
