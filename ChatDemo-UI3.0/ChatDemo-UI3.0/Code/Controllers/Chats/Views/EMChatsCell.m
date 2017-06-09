@@ -56,6 +56,13 @@
     NSString *draft = model.conversation.ext[@"Draft"];
     _contentLabel.text = draft && draft.length > 0 ? [NSString stringWithFormat:@"[草稿]%@",draft] : [self _latestMessageTitleWithConversation:model.conversation];
     _timeLabel.text = [self _latestMessageTimeWithConversation:model.conversation];
+    
+    if (_model.isTop) {
+        self.contentView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.8];
+    }
+    else {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 #pragma mark - private
